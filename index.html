@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculando o Consumo</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    
+</head>
+<body>
+    <header>
+        <h1>Calculadora de Consumo</h1>
+    </header>
+
+    <main>
+        <section class="form-section">
+            <form id="form">
+                <div class="input-group">
+                    <label for="nome-eletrodomestico">Nome do Eletrodoméstico:</label>
+                    <input type="text" id="nome-eletrodomestico" placeholder="Ex: Geladeira" required>
+                </div>
+                
+                <div class="input-group">
+                    <label for="potencia">Potência (W):</label>
+                    <input type="number" id="potencia" step="0.01" placeholder="Ex: 1500" required>
+                </div>
+                
+                <div class="input-group">
+                    <label for="horas">Horas de Uso por Dia:</label>
+                    <input type="number" id="horas" step="0.01" placeholder="Ex: 2.5" required>
+                </div>
+                
+                <div class="input-group">
+                    <label for="dias">Dias de Uso no Mês:</label>
+                    <input type="number" id="dias" placeholder="Ex: 30" required>
+                </div>
+
+                <button type="submit" class="btn">Adicionar</button>
+            </form>
+        </section>
+
+        <section class="output-section">
+            <h2 id="consumo-total">Consumo Total: 0.00 kWh</h2>
+            <div id="nivel-consumo" class="termometro" aria-valuemin="0" aria-valuemax="300"></div>
+
+            <h2>Eletrodomésticos Registrados</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Consumo (kWh/mês)</th>
+                        <th>Categoria</th>
+                    </tr>
+                </thead>
+                <tbody id="tabela-eletrodomesticos"></tbody>
+            </table>
+
+            <h2>Dicas de Economia</h2>
+            <ul id="dicas"></ul>
+        </section>
+    </main>
+
+    <footer>
+    </footer>
+</body>
+<script src="/js/script.js"></script>
+</html>
